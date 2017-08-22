@@ -14,11 +14,11 @@
 </head>
 
 <body id="admin-page">
-    <div class="container">
 
         <!-- Static navbar -->
-        <nav class="navbar navbar-default">
-            <div class="container-fluid">
+        <nav class="navbar navbar-default navbar-static-top">
+
+            <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                         <span class="sr-only">Toggle navigation</span>
@@ -30,9 +30,15 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Админка</a></li>
+                        <li  class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Пользователи <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Показать всех</a></li>
+                                <li><a href="#">Добавить</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Посты</a></li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
                             <ul class="dropdown-menu">
@@ -47,20 +53,40 @@
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="./">Default <span class="sr-only">(current)</span></a></li>
-                        <li><a href="../navbar-static-top/">Static top</a></li>
-                        <li><a href="../navbar-fixed-top/">Fixed top</a></li>
+                        @if (Auth::guest())
+                            <li><a href="{{ route('login') }}">Войти</a></li>
+                            <li><a href="{{ route('register') }}">Регистрация</a></li>
+                        @else
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="{{ route('logout') }}"
+                                           onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Выход
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
                     </ul>
                 </div><!--/.nav-collapse -->
-            </div><!--/.container-fluid -->
+            </div><!--/.container -->
         </nav>
 
         <!-- Main component for a primary marketing message or call to action -->
-        <div class="jumbotron">
+        <div class="container">
             @yield('content');
         </div>
 
-    </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

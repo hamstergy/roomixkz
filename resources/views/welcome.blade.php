@@ -1,95 +1,145 @@
-<!doctype html>
-<html lang="{{ config('app.locale') }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layouts.app')
 
-        <title>Laravel</title>
-
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
-
-        <!-- Styles -->
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 100;
-                height: 100vh;
-                margin: 0;
-            }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
-            .content {
-                text-align: center;
-            }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 12px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
-            .m-b-md {
-                margin-bottom: 30px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
-                    @if (Auth::check())
-                        <a href="{{ url('/home') }}">Home</a>
-                    @else
-                        <a href="{{ url('/login') }}">Login</a>
-                        <a href="{{ url('/register') }}">Register</a>
-                    @endif
+@section('content')
+    <div class="container">
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                        <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-car fa-stack-1x fa-inverse"></i>
+                        </span>
                 </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                <div class="panel-body">
+                    <h4>Запчасти на автомобили</h4>
+                    <p>Запасные части на автомобили. Продажа и поставка.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
                 </div>
             </div>
         </div>
-    </body>
-</html>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                        <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Запчасти на грузовую технику</h4>
+                    <p>Запасные части для грузовиков и автобусов.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                        <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Запчасти на спецтехнику</h4>
+                    <p>Запасные части для спецтехники и сельхозтехники.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                        <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Шины на легковые автомобили</h4>
+                    <p>Продажа шин, доставка по всему Казахстану.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                        <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Шины на грузовые автомобили</h4>
+                    <p>Продажа шин, доставка по всему Казахстану.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <div class="panel panel-default text-center">
+                <div class="panel-heading">
+                        <span class="fa-stack fa-4x">
+                              <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                        </span>
+                </div>
+                <div class="panel-body">
+                    <h4>Шины на спецтехнику</h4>
+                    <p>Продажа шин, доставка по всему Казахстану.</p>
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="myModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Оставьте заявку и узнайте наличие и цену на запчасти</h4>
+                </div>
+                <div class="modal-body">
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label for="inputTel3" class="col-sm-2 control-label">Телефон</label>
+                            <div class="col-sm-10">
+                                <input type="tel" class="form-control" id="inputTel3" placeholder="+7(777)777-77-77">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName2" class="col-sm-2 control-label">Запчасть</label>
+                            <div class="col-sm-10">
+                            <input type="text" class="form-control" id="inputName2" placeholder="Амортизатор">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="inputVin3" class="col-sm-2 control-label">VIN-код</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="inputVin3" placeholder="SZ45345345FD34">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-default">Отправить заявку</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+@endsection
