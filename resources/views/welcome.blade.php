@@ -11,9 +11,9 @@
                         </span>
                 </div>
                 <div class="panel-body">
-                    <h4>Запчасти на автомобили</h4>
+                    <h4><a href="/catalog" title="Запасные части на автомобили">Запчасти на автомобили</a></h4>
                     <p>Запасные части на автомобили. Продажа и поставка.</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/catalog'">Подобрать запчасть</button>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@
                 </div>
                 <div class="panel-body">
                     <h4>Запчасти на грузовую технику</h4>
-                    <p>Запасные части для грузовиков и автобусов.</p>
+                    <p>Запасные части для грузовиков и автобусов. Продажа и поставка.</p>
                     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
                 </div>
             </div>
@@ -41,9 +41,9 @@
                         </span>
                 </div>
                 <div class="panel-body">
-                    <h4>Запчасти на спецтехнику</h4>
+                    <h4><a href="/spec" title="Запчасти на спецтехнику и сельхозтехнику">Запчасти на спецтехнику</a></h4>
                     <p>Запасные части для спецтехники и сельхозтехники.</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/spec'">Подобрать запчасть</button>
                 </div>
             </div>
         </div>
@@ -89,9 +89,9 @@
                         </span>
                 </div>
                 <div class="panel-body">
-                    <h4>Шины на спецтехнику</h4>
+                    <h4><a href="/spectyres" title="Шины на спецтехнику и сельхозтехнику">Шины на спецтехнику</a></h4>
                     <p>Продажа шин, доставка по всему Казахстану.</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/spectyres'">Подобрать шины</button>
                 </div>
             </div>
         </div>
@@ -107,24 +107,30 @@
                     <h4 class="modal-title">Оставьте заявку и узнайте наличие и цену на запчасти</h4>
                 </div>
                 <div class="modal-body">
-                    <form class="form-horizontal">
+                    @if(Session::has('message'))
+                        <div class="alert alert-info">
+                            {{Session::get('message')}}
+                        </div>
+                    @endif
+                    <form class="form-horizontal" method="post" action="{{ action('RequestController@getRequestForm') }}">
+                        {{ csrf_field() }}
                         <div class="form-group">
                             <label for="inputTel3" class="col-sm-2 control-label">Телефон</label>
                             <div class="col-sm-10">
-                                <input type="tel" class="form-control" id="inputTel3" placeholder="+7(777)777-77-77">
+                                <input type="tel" class="form-control" id="inputTel3" name="telephone" placeholder="+7(777)777-77-77">
                             </div>
 
                         </div>
                         <div class="form-group">
                             <label for="inputName2" class="col-sm-2 control-label">Запчасть</label>
                             <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputName2" placeholder="Амортизатор">
+                            <input type="text" class="form-control" id="inputName2" name="parts" placeholder="Амортизатор">
                             </div>
                         </div>
                         <div class="form-group">
                             <label for="inputVin3" class="col-sm-2 control-label">VIN-код</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" id="inputVin3" placeholder="SZ45345345FD34">
+                                <input type="text" class="form-control" id="inputVin3" name="vin" placeholder="SZ45345345FD34">
                             </div>
                         </div>
 

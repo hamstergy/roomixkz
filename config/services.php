@@ -15,8 +15,8 @@ return [
     */
 
     'mailgun' => [
-        'domain' => env('MAILGUN_DOMAIN'),
-        'secret' => env('MAILGUN_SECRET'),
+        'domain' => env('mg.roomix.kz'),
+        'secret' => env('key-a0c3fdc14ac734eb39edd5d1b59dcae7'),
     ],
 
     'ses' => [
