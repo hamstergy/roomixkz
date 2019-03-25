@@ -13,12 +13,14 @@
     <link rel="icon" href="/images/cogg.ico">
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">
-   <!--  <script src="https://oss.maxcdh.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
+{{--    <link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">--}}
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <!--  <script src="https://oss.maxcdh.com/libs/html5shiv/3.7.0/html5shiv.js"></script>-->
    <!-- <script src="https://oss.maxcdh.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
     <script src="{{asset('js/vue.min.js')}}"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-
+    {{--<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}">--}}
+    {{--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">--}}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
     <div id="app">
@@ -27,7 +29,7 @@
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <div class="visible-xs" style="position: absolute;right: 10px;"><a href="https://api.whatsapp.com/send?phone=77474432415" onclick="yaCounter39775005.reachGoal('WHATSAPP'); return true;" style="color: #33d216; font-weight:bold;"><i style="color: #33d216 !important; font-size:80px; float:right; padding-right:30px;" class="fa fa-whatsapp"></i><br>whatsapp</a></div>
+                    <div class="visible-xs" style="position: absolute;right: 10px;"><a href="https://api.whatsapp.com/send?phone=77474432415" onclick="yaCounter39775005.reachGoal('WHATSAPP'); return true;" style="color: #33d216; font-weight:bold;"><i style="color: #33d216 !important; font-size:80px; float:right; padding-right:30px;" class="fab fa-whatsapp"></i><br>whatsapp</a></div>
 
 
 

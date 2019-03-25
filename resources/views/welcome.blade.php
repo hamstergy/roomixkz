@@ -17,18 +17,33 @@
                 </div>
             </div>
         </div>
+        {{--<div class="col-md-4 col-sm-6">--}}
+            {{--<div class="panel panel-default text-center">--}}
+                {{--<div class="panel-heading">--}}
+                        {{--<span class="fa-stack fa-4x">--}}
+                              {{--<i class="fa fa-circle fa-stack-2x text-primary"></i>--}}
+                              {{--<i class="fa fa-truck fa-stack-1x fa-inverse"></i>--}}
+                        {{--</span>--}}
+                {{--</div>--}}
+                {{--<div class="panel-body">--}}
+                    {{--<h4>Запчасти на грузовую технику</h4>--}}
+                    {{--<p>Запасные части для грузовиков и автобусов. Продажа и поставка.</p>--}}
+                    {{--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+        {{--</div>--}}
         <div class="col-md-4 col-sm-6">
             <div class="panel panel-default text-center">
                 <div class="panel-heading">
                         <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-truck fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-snowplow fa-stack-1x fa-inverse"></i>
                         </span>
                 </div>
                 <div class="panel-body">
-                    <h4>Запчасти на грузовую технику</h4>
-                    <p>Запасные части для грузовиков и автобусов. Продажа и поставка.</p>
-                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Подобрать запчасть</button>
+                    <h4><a href="/spectehnika" title="Продажа спецтехники и сельхозтехники">Продажа спецтехники</a></h4>
+                    <p>Продажа спецтехники и<br>сельхозтехники.</p>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='/spectehnika'">Подобрать</button>
                 </div>
             </div>
         </div>
@@ -37,7 +52,7 @@
                 <div class="panel-heading">
                         <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-gears fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-cogs fa-stack-1x fa-inverse"></i>
                         </span>
                 </div>
                 <div class="panel-body">
@@ -55,7 +70,7 @@
                 <div class="panel-heading">
                         <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-ring fa-stack-1x fa-inverse"></i>
                         </span>
                 </div>
                 <div class="panel-body">
@@ -70,7 +85,7 @@
                 <div class="panel-heading">
                         <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-ring fa-stack-1x fa-inverse"></i>
                         </span>
                 </div>
                 <div class="panel-body">
@@ -85,7 +100,7 @@
                 <div class="panel-heading">
                         <span class="fa-stack fa-4x">
                               <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                              <i class="fa fa-support fa-stack-1x fa-inverse"></i>
+                              <i class="fa fa-ring fa-stack-1x fa-inverse"></i>
                         </span>
                 </div>
                 <div class="panel-body">

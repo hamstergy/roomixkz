@@ -24,6 +24,17 @@ class SpecController extends Controller
         ];
         return view('spec.spec', $data);
     }
+    public function spectehnika()
+    {
+        $spectypes = Spectype::orderBy('name', 'ASC')->get();
+        $data = [
+            'title' => 'Купить спецтехнику в Казахстане, Алматы, Караганда, Астана, Шымкент с доставкой по Казахстану',
+            'pagetitle' => 'Книга для гостей',
+            'spectypes' => $spectypes,
+            'description' => 'Спецтехника и сельхозтехника по выгодным ценам. Широкий ассортимент, оперативный подбор. Доставка по Казахстану.'
+        ];
+        return view('spectehnika.spectehnika', $data);
+    }
 
     public function getSpecspareparts($spectype)
     {
