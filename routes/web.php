@@ -13,18 +13,15 @@
 
 use Illuminate\Support\Facades\Mail;
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/', 'HomeController@index');
 Route::resource('admin/users','AdminUsersController');
-Route::get('/admin', function(){
-    return view('admin.index');
-}
-    );
+//Route::get('/admin', function(){
+//    return view('admin.index');
+//}
+//    );
 Route::get('catalog/', ['uses' => 'CatalogController@index', 'as' => 'catalog']);
 Route::get('service/', ['uses' => 'ServiceController@index', 'as' => 'service']);
 Route::get('specservice/', ['uses' => 'SpecServiceController@index', 'as' => 'specservice']);
@@ -38,6 +35,9 @@ Route::post('catalog/{sparepart}/{carbrand}', ['uses' => 'CatalogController@getC
 Route::get('spec/', ['uses' => 'SpecController@index', 'as' => 'spec']);
 Route::get('spec/{spectype}/', ['uses' => 'SpecController@getSpecspareparts', 'as' => 'spec.specsparepart']);
 Route::post('spec/{spectype}/', ['uses' => 'SpecController@getSpecspareparts', 'as' => 'spec.specsparepart']);
+Route::get('spectehnika/', ['uses' => 'SpecController@spectehnika', 'as' => 'spectehnika']);
+Route::get('spectehnika/{spectype}/', ['uses' => 'VehicleController@getVehicles', 'as' => 'spectehnika.vehicles']);
+Route::post('spectehnika/{spectype}/', ['uses' => 'VehicleController@getVehicles', 'as' => 'spectehnika.vehicles']);
 Route::get('spec/{spectype}/{specsparepart}', ['uses' => 'SpecController@getSpecbrands', 'as' => 'spec.specbrand']);
 Route::post('spec/{spectype}/{specsparepart}', ['uses' => 'SpecController@getSpecbrands', 'as' => 'spec.specbrand']);
 Route::get('spec/{spectype}/{specsparepart}/{specbrand}', ['uses' => 'SpecController@getSpecmodels', 'as' => 'spec.specmodel']);
@@ -56,13 +56,13 @@ Route::get('request', 'RequestController@getRequestForm');
 Route::get('requestspec', 'RequestController@getRequestFormSpec');
 Route::get('requestspectyres', 'RequestController@getRequestFormSpecTyres');
 Route::get('requestspecservice', 'RequestController@getRequestFormSpecService');
-Route::get('mail/',function (){
-    $data = [
-        'title' => "test message",
-        'content' => 'hello my world'
-    ];
-    Mail::send('emails.test2', $data, function ($message){
-       $message->to('info@elen.kz','Hamster')->subject('Hello world hello!');
-       echo 'Send';
-    });
-});
+//Route::get('mail/',function (){
+//    $data = [
+//        'title' => "test message",
+//        'content' => 'hello my world'
+//    ];
+//    Mail::send('emails.test2', $data, function ($message){
+//       $message->to('info@elen.kz','Hamster')->subject('Hello world hello!');
+//       echo 'Send';
+//    });
+//});

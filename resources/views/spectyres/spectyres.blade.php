@@ -52,15 +52,16 @@
                                   </tr>
                                 </thead>
                                 <tbody>
-                                    <!--  -->
-                                    <tr v-for = "row in filteredList">
-                                    <th scope="row">@{{ row.id }}</th>
-                                    <td>@{{ row.name }}</td>
-                                    <td>@{{ row.size }}</td>
-                                    <td>@{{ row.width }}</td>
-                                    <td>@{{ row.description }}</td>
-                                    <td>@{{ formatMoney(parseInt(row.price)) }}</td>
-                                    </tr>
+                                    @foreach($tyres as $tyre)
+                                        <tr>
+                                        <th scope="row">{{ $tyre->id }}</th>
+                                        <td>{{ $tyre->name }}</td>
+                                        <td>{{ $tyre->size }}</td>
+                                        <td>{{ $tyre->width }}</td>
+                                        <td>{{ $tyre->description }}</td>
+                                        <td>{{ number_format($tyre->price,0) }}</td>
+                                        </tr>
+                                    @endforeach
                                 </tbody>
                               </table>
                               
@@ -115,54 +116,4 @@
             </div>
         </div>
     </div>
-    <script>  
-    new Vue({
-    el: '#aper',
-    data: {
-        wheels: [],
-        search: '',
-        searchtwo: '',
-        sizer: [],
-        widthr: [{width:'8.50'},{width:'10.00'}],
-        
-    },
-    methods: {
-    	setJson (payload) {
-        	this.wheels = payload
-        },
-        setJson2 (payload) {
-            this.sizer = payload
-        },
-        setJson3 (payload) {
-            this.widthr = payload
-        },
-        formatMoney(money) {
-            var moneyString = money.toString();
-            var moneyLength = moneyString.length;
-            if(moneyString === '0'){
-                return 'нет цены';
-            }
-            if(moneyLength < 4) {
-                return moneyString;
-            }
-
-            var dotIndex = moneyLength - 3;
-            return moneyString.substr(0, dotIndex) + "," + moneyString.substr(dotIndex);
-        }   
-    },
-    computed:{
-        filterWidth() {
-            return this.wheels.filter(newArr => {
-                return newArr.width.includes(this.searchtwo)
-            });
-        },
-        filteredList() {
-            return this.filterWidth.filter(newArr => {
-                return newArr.size.includes(this.search)
-            });
-        }
-        
-    }
-})
-    </script>
 @endsection
