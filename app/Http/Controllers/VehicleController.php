@@ -30,7 +30,7 @@ class VehicleController extends Controller
             'pagetitle' => 'Книга для гостей',
             'vehicles' => $vehicles,
             'type' => $type,
-            'description' => Str::lower($type->name).' по выгодным ценам. Широкий ассортимент, оперативный подбор. Доставка по Казахстану, бесплатная доставка по Алматы.'
+            'description' => 'Купить '.Str::lower($type->name).' по выгодным ценам. Широкий ассортимент, оперативный подбор. Доставка по Казахстану, бесплатная доставка по Алматы.'
         ];
         return view('spectehnika.vehicles', $data);
     }

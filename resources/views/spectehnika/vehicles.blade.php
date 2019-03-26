@@ -1,10 +1,11 @@
 @extends('layouts.spec')
-@section('titleSpec', $title.' - ROOMIX')
+@section('title', $title.' - ROOMIX')
 @section('description', $description)
 @section('content')
     <div class="container">
         <ol class="breadcrumb">
-            <li class="breadcrumb-item active">Каталог</li>
+            <li class="breadcrumb-item active"><a href="/spectehnika">Каталог</a></li>
+            <li class="breadcrumb-item active">{{$type->name}}</li>
         </ol>
         <div class="row">
             <div class="col-md-8">
@@ -14,7 +15,7 @@
                          aria-valuemax="100"
                          style="width: 50%"><span class="sr-only">50% Complete (success)</span></div>
                 </div>
-                <h1>{{$type->name}}</h1>
+                <h1>Купить {{ Illuminate\Support\Str::lower($type->name)}}</h1>
                 {{--<p>Выберите раздел</p>--}}
                 <div class="row">
 
@@ -36,18 +37,18 @@
                                 <div class="bg-light"style="position: absolute;bottom: 0;
                                             left: 0;
                                             width: 100%;">
-                                    <h3>{{ $type->name }}</h3>
+                                    <h3>{{ $type->name }} ({{ $type->year }} год)</h3>
                                 </div>
                             </div>
                             <div class="card-body">
-                                    <p class="card-text">{{$type->description}}</p>
+                                    <p class="card-text" style="height: 107px;overflow: hidden;">{!!html_entity_decode($type->description)!!}</p>
                                     <div class="d-flex justify-content-between align-items-center">
                                         {{--<div class="btn-group">--}}
                                             {{--<button type="button" class="btn btn-sm btn-outline-secondary">View</button>--}}
                                             {{--<button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>--}}
                                         {{--</div>--}}
                                         {{--<small class="text-muted">9 mins</small>--}}
-                                        <strong class="d-inline-block mb-2 text-success">{{ $type->price }} тенге</strong>
+                                        <strong class="d-inline-block mb-2 text-success">{{ number_format($type->price,0,'.',' ') }} тенге</strong>
                                     </div>
                                 </div>
                             </div>
@@ -92,7 +93,6 @@
                                 <input type="text" class="form-control" id="inputName2" name="parts" placeholder="Втулка шатуна">
                             </div>
                         </div>
-
                         <div class="form-group">
                             <div class="col-sm-offset-3 col-sm-12">
                                 <button v-on:click="submitted=true" :disabled="submitted" type="submit" onclick="yaCounter39775005.reachGoal('SPECORDER'); return true;" class="btn btn-success">Отправить заявку</button>

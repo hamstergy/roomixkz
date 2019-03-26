@@ -1,5 +1,5 @@
 @extends('layouts.spec')
-@section('titleSpec', $title.' - ROOMIX')
+@section('title', $title.' - ROOMIX')
 @section('description', $description)
 @section('content')
     <div class="container">
