@@ -1,5 +1,5 @@
 @extends('layouts.spec')
-@section('title', $title.' - ROOMIX')
+@section('title', $title.git branch new_branch_name 84b361c)
 @section('description', $description)
 @section('content')
     <div class="container">
