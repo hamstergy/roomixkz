@@ -1,5 +1,5 @@
 @extends('layouts.spec')
-@section('title', $title.git branch new_branch_name 84b361c)
+@section('title', $title)
 @section('description', $description)
 @section('content')
     <div class="container">
@@ -18,27 +18,27 @@
                     <h1>Каталог шин на {{ Illuminate\Support\Str::lower($type->name) }}</h1>
                 @endif
 
-                <div :json="setJson2({{ $uniquesizes }})"></div>
-                <div :json="setJson3({{ $uniquewidths }})"></div>
-                <div class="row">
-                <div class="form-group col-sm-6">
-                <select class="form-control" v-model="search" >
-                    <option value="" selected>Выберите размер</option>
-                    <option v-for="size in sizer" v-bind:value="size">
-                    @{{ size }}
-                    </option>
-                </select>
-                </div>
-                <div class="form-group col-sm-6">
-                <select class="form-control"v-model="searchtwo" >
-                    <option value="" selected>Выберите ширину</option>
-                    <option v-for="width in widthr" v-bind:value="width">
-                    @{{ width }}
-                    </option>
-                </select>
-                </div>
-            </div>
-                <div class="row fix" :json="setJson({{ $tyres }})">
+                {{--<div :json="setJson2({{ $uniquesizes }})"></div>--}}
+                {{--<div :json="setJson3({{ $uniquewidths }})"></div>--}}
+                {{--<div class="row">--}}
+                {{--<div class="form-group col-sm-6">--}}
+                {{--<select class="form-control" v-model="search" >--}}
+                    {{--<option value="" selected>Выберите размер</option>--}}
+                    {{--<option v-for="size in sizer" v-bind:value="size">--}}
+                    {{--@{{ size }}--}}
+                    {{--</option>--}}
+                {{--</select>--}}
+                {{--</div>--}}
+                {{--<div class="form-group col-sm-6">--}}
+                {{--<select class="form-control"v-model="searchtwo" >--}}
+                    {{--<option value="" selected>Выберите ширину</option>--}}
+                    {{--<option v-for="width in widthr" v-bind:value="width">--}}
+                    {{--@{{ width }}--}}
+                    {{--</option>--}}
+                {{--</select>--}}
+                {{--</div>--}}
+            {{--</div>--}}
+                <div class="row fix">
                     <div class="col-xs-12 col-lg-12 table-responsive" style="line-height: 1.4;">
                         <table class="table table-striped" style="font-size:13px;">  
                                 <thead>
