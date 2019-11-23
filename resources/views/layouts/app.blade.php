@@ -29,7 +29,7 @@
                 <div class="navbar-header">
 
                     <!-- Collapsed Hamburger -->
-                    <div class="visible-xs" style="position: absolute;right: 10px;"><a href="https://api.whatsapp.com/send?phone=77781400610" onclick="yaCounter39775005.reachGoal('WHATSAPP'); return true;" style="color: #33d216; font-weight:bold;"><i style="color: #33d216 !important; font-size:80px; float:right; padding-right:30px;" class="fab fa-whatsapp"></i><br>whatsapp</a></div>
+                    <div class="visible-xs" style="position: absolute;right: 10px;"><a href="https://api.whatsapp.com/send?phone=77006793082" onclick="yaCounter39775005.reachGoal('WHATSAPP'); return true;" style="color: #33d216; font-weight:bold;"><i style="color: #33d216 !important; font-size:80px; float:right; padding-right:30px;" class="fab fa-whatsapp"></i><br>whatsapp</a></div>
 
 
 
@@ -41,7 +41,7 @@
                 </div>
                 <div id="navbar" class="navbar-right">
                     <div class="nav-item">
-                        <i style="color: #168dd2 !important; font-size:19px;" class="fa fa-phone-square"></i><span style="font-size:17px; padding-right: 20px; font-weight:bold;"><a href="tel:+77755208312" onclick="yaCounter39775005.reachGoal('PHONE1'); return true;">+7 (775) 520-8312</a></span><br><i style="color: #168dd2 !important; font-size:19px;" class="fa fa-envelope-square"></i><span style="font-size:17px; padding-right: 20px; font-weight:bold;"> <a href="mailto:info@roomix.kz" onclick="yaCounter39775005.reachGoal('MAIL'); return true;">info@roomix.kz</a></span>
+                        <i style="color: #168dd2 !important; font-size:19px;" class="fa fa-phone-square"></i><span style="font-size:17px; padding-right: 20px; font-weight:bold;"><a href="tel:+77006793082" onclick="yaCounter39775005.reachGoal('PHONE1'); return true;">+7 (700) 679-3082</a></span><br><i style="color: #168dd2 !important; font-size:19px;" class="fa fa-envelope-square"></i><span style="font-size:17px; padding-right: 20px; font-weight:bold;"> <a href="mailto:info@roomix.kz" onclick="yaCounter39775005.reachGoal('MAIL'); return true;">info@roomix.kz</a></span>
                     </div>
                 </div>
             </div>
