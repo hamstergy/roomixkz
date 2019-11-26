@@ -74,7 +74,7 @@
                         <i class="fa fa-shopping-cart fa-stack-2x" style="color:#337ab7;"></i>
                     </span>
                     </div>
-                    <h4><b>Бесплатная доставка по Алматы!</b> По Казахстану - оплата только услуг транспортной компании!</h4>
+                    <h4><b>Бесплатная доставка по Караганде!</b> По Казахстану - оплата только услуг транспортной компании!</h4>
                 </div>
                 <div class="col-lg-3 col-md-6 text-center">
                     <div class="panel-heading">
@@ -131,5 +131,12 @@
     </script>
     <noscript><div><img src="https://mc.yandex.ru/watch/39775005" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
     <!-- /Yandex.Metrika counter -->
+    <!-- RedConnect -->
+    <script id="rhlpscrtg" type="text/javascript" charset="utf-8" async="async"
+    src="https://web.redhelper.ru/service/main.js?c=roomix"></script>
+    <div style="display: none"><a class="rc-copyright"
+    href="http://redconnect.ru">Сервис звонка с сайта RedConnect</a></div>
+    <!--  /RedConnect -->
+
 </body>
 </html>
