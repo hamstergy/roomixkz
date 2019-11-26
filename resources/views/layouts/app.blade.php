@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title', 'ROOMIX')</title>
-    <meta name="description" content="@yield('description', 'Запасные части на иномарки в Алматы')">
+    <meta name="description" content="@yield('description', 'Запасные части на иномарки в Караганде, Алматы')">
     <link rel="icon" href="/images/cogg.ico">
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/app.css')}}">

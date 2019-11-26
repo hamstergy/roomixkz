@@ -17,11 +17,11 @@ class CatalogController extends Controller
         $subparts = Sparepart::orderBy('name', 'ASC')->get()
             ->where('groupid','<>','0');
         $data = [
-            'title' => 'Купить запчасти на иномарку в Алматы',
+            'title' => 'Купить запчасти на иномарку в Караганде, Алматы',
             'pagetitle' => 'Книга для гостей',
             'spareparts' => $spareparts,
             'subparts' => $subparts,
-            'description' => 'Автозапчасти для иномарок по выгодным ценам. Широкий ассортимент, оперативный подбор. Доставка по Казахстану, бесплатная доставка по Алматы.'
+            'description' => 'Автозапчасти для иномарок по выгодным ценам. Широкий ассортимент, оперативный подбор. Доставка по Казахстану, бесплатная доставка по Караганде, Алматы.'
         ];
         return view('catalog.catalog', $data);
     }
@@ -37,9 +37,9 @@ class CatalogController extends Controller
                 ->where('groupid',$parts->groupid);
         }
         $markas = Carbrand::orderBy('name', 'ASC')->get();
-        $metadesc = $parts->name.' по выгодной цене. Широкий ассортимент, оперативный подбор. Доставка по Казахстану, бесплатная доставка по Алматы.';
+        $metadesc = $parts->name.' по выгодной цене. Широкий ассортимент, оперативный подбор. Доставка по Казахстану, бесплатная доставка по Караганде, Алматы.';
         $data = [
-            'title' => 'Купить '.$parts->name.' в Алматы',
+            'title' => 'Купить '.$parts->name.' в Караганде, Алматы',
             'markas' => $markas,
             'subparts' => $subparts,
             'parts' => $parts,
@@ -59,9 +59,9 @@ class CatalogController extends Controller
         //    ->orderBy('name', 'desc')
         //  ->take(10)
         //->get();
-        $metadesc = 'Широкий ассортимент, оперативный подбор. '.$parts->name.' на '.$markal->name.' по выгодной цене. Бесплатная доставка по Алматы.';
+        $metadesc = 'Широкий ассортимент, оперативный подбор. '.$parts->name.' на '.$markal->name.' по выгодной цене. Бесплатная доставка по Караганде, Алматы.';
         $data = [
-            'title' =>'Купить '.$parts->name.' на '.$markal->name.' в Алматы',
+            'title' =>'Купить '.$parts->name.' на '.$markal->name.' в Караганде, Алматы',
             'markal' => $markal,
             'parts' => $parts,
             'description' => $metadesc
@@ -79,9 +79,9 @@ class CatalogController extends Controller
         //    ->orderBy('name', 'desc')
         //  ->take(10)
         //->get();
-        $metadesc = 'Широкий ассортимент, оперативный подбор. '.$parts->name.' на '.$markal->name.' '.$carmodels->name.' по выгодной цене. Бесплатная доставка по Алматы.';
+        $metadesc = 'Широкий ассортимент, оперативный подбор. '.$parts->name.' на '.$markal->name.' '.$carmodels->name.' по выгодной цене. Бесплатная доставка по Караганде, Алматы.';
         $data = [
-            'title' => 'Купить '.$parts->name.' на '.$markal->name.' '.$carmodels->name.' в Алматы',
+            'title' => 'Купить '.$parts->name.' на '.$markal->name.' '.$carmodels->name.' в Караганде, Алматы',
             'markal' => $markal,
             'parts' => $parts,
             'models' => $carmodels,
