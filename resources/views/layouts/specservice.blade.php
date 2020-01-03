@@ -18,6 +18,7 @@
    <!-- <script src="https://oss.maxcdh.com/libs/respond.js/1.4.2/respond.min.js"></script> -->
     <script src="{{asset('js/vue.min.js')}}"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script data-ad-client="ca-pub-0078056479738532" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 <body>
     <div id="app">
